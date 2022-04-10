@@ -1,0 +1,14 @@
+<form #loginForm="ngForm">
+
+  <input type="email" name="email" 
+    ngModel
+    placeholder="Email">
+  <input type="password" name="password"
+    ngModel
+    placeholder="Password">
+  <button (click)="onLogin(loginForm)"> Login </button>
+  <div>
+    {{ loginForm.value | json }}, {{ loginForm.valid }}
+  </div>
+
+</form>
